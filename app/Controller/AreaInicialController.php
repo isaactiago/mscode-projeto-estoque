@@ -1,13 +1,16 @@
-<?php
+<?php 
 
 namespace App\Controller;
 
-class LoginController extends AbstractController
+class AreaInicialController extends AbstractController
 {
     public function index(array $data): void
     {
-        $this->render('login.php');
+        $this->render('index.php');
       
         
     }
 }
+
+
+?>

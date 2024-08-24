@@ -27,7 +27,8 @@ class Query
             if($condicao !== null) {
                 $sql .= " WHERE {$condicao}";
             }
-
+            
+            
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
 
@@ -48,7 +49,7 @@ class Query
             $sql = "INSERT INTO {$tabela} ({$colunas}) VALUES ({$valores})";
 
             $stmt = $this->pdo->prepare($sql);
-
+        
             foreach ($dados as $coluna => $valor) {
                 $stmt->bindValue(":{$coluna}", $valor);
             }

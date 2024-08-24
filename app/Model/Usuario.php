@@ -12,12 +12,17 @@ class Usuario
     public function __construct()
     {
         $this->query = new Query();
+
+      
     }
+
+ 
 
     public function buscarPorEmail(string $email): array
     {
-        $usuario = $this->query->select('usuario', 'email = ' . $email);
 
+        $usuario = $this->query->select('usuario', 'email = ' . ' "'.$email.'" '); 
+       
         return $usuario;
     }
 }

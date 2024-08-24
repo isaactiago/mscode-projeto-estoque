@@ -4,6 +4,7 @@ namespace App\Controller;
 
 abstract class AbstractController
 {
+    //metodo responsavel por retornar o centeudo (view) 
     public function render(string $viewName, array $data = []): void
     {
         require_once($_SERVER['DOCUMENT_ROOT'] . '/' . '/view/' . $viewName);
