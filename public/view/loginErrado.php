@@ -25,11 +25,16 @@
             <div class="form-floating">
                 <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
                 <label for="email">Email</label>
+               
             </div>
+           
             <div class="form-floating">
                 <input type="password" name="password" class="form-control" id="senha" placeholder="Password">
                 <label for="senha">Senha</label>
             </div>
+            <div class="alert alert-danger" role="alert">
+                     Email ou senha errado pae, confere ai !!!
+                </div>
 
             <button class="btn btn-primary w-100 py-2" type="submit">Acessar</button>
             <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
