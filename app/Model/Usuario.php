@@ -33,7 +33,7 @@ class Usuario
     public function cadastarUsuario(array $dados): bool
     {
         
-
+        
         if($usuario = $this->query->insert('usuario',$dados)){
             return true;
         }

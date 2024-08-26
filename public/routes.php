@@ -5,10 +5,12 @@ use App\Controller\AutenticarController;
 use App\Controller\Error\NotFoundController;
 use App\Controller\LoginController;
 use App\Controller\AreaInicialController;
-use App\Controller\LoginErradoController;
+use App\Controller\Error\LoginErradoController;
 use App\Controller\CadastrarController;
 use App\Controller\InserirController;
-use App\Controller\CadastroErradoController;
+use App\Controller\Error\CadastroErradoController;
+
+
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 $router = [

@@ -22,11 +22,11 @@
 
                 <h1 class="h3 fw-normal my-0 ms-2">MS Code - Estoque</h1>
             </div>
-
-            <div class="form-floating">
             <div class="alert alert-danger" role="alert">
                      Usuario já cadastrado !!!
             </div>
+            <div class="form-floating">
+         
                 <input type="text" name="nome" class="form-control" id="nome" placeholder="name@example.com">
                 <label for="email">Nome completo</label>
                

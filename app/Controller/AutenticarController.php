@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Controller;
-
 use App\Model\Usuario;
 
 
@@ -18,11 +17,12 @@ class AutenticarController extends AbstractController
         $usuarioConexao = new Usuario();
     
          if($usuarioConexao->validaLogin(email: $requestData['email'],senha : $requestData['password'])){
-            $this->redirect('/index');
 
+            $this->redirect('/index');
             exit;
+
         }else{
-          
+            //se o meu valida login nao for true; ele manda para essa pagina
             $this->redirect('/loginErrado');
             exit; 
         }

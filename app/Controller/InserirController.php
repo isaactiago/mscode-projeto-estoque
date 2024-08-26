@@ -3,8 +3,7 @@
 namespace App\Controller;
 use App\Model\Usuario;
 
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+
 class InserirController extends AbstractController
 {
 
@@ -12,6 +11,7 @@ class InserirController extends AbstractController
     {
         $usuarioConexao = new Usuario();
 
+        //criptografa a senha do input que o usuario digitou;
         $senha = $requestData['password'];
         $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
@@ -21,11 +21,12 @@ class InserirController extends AbstractController
            'senha' => $senha_hash
         ];
         
+        //valida se o cadastro é true;
         if($usuarioConexao->cadastarUsuario(dados: $listaInfo)){
             $this->redirect('/login');
             exit; 
         }else{
-        
+            //se nao, quer dizer que ja existe um usuario, ou algun input veio vazio;
             $this->redirect('/cadastroErrado');
             exit; 
         }
