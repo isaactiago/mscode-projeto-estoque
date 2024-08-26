@@ -11,7 +11,7 @@ class AutenticarController extends AbstractController
     {
  
         if(empty($_POST['email']) || empty($_POST['password'])){
-             $this->redirect('/login');
+            $this->redirect('/login');
             exit; 
         } 
            
@@ -27,7 +27,5 @@ class AutenticarController extends AbstractController
             exit; 
         }
        
-       
-        
     }
 }

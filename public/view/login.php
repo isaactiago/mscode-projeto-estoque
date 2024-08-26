@@ -10,6 +10,12 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="/assets/css/styles.css" rel="stylesheet">
     <link href="/assets/css/login.css" rel="stylesheet">
+    <style>
+        a{
+            text-decoration:none;
+            color: white;
+        }
+    </style>
    
 </head>
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
@@ -32,6 +38,13 @@
             </div>
 
             <button class="btn btn-primary w-100 py-2" type="submit">Acessar</button>
+            
+               
+                    <button class="btn bg-success  mt-2 w-100 py-2" > 
+                       <a href="/cadastrar">Cadastre-se</a>
+                    </button>
+           
+           
             <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
         </form>
     </main>

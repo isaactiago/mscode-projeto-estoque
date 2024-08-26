@@ -53,7 +53,7 @@ class Query
             foreach ($dados as $coluna => $valor) {
                 $stmt->bindValue(":{$coluna}", $valor);
             }
-
+            
             $stmt->execute();
 
             return $this->pdo->lastInsertId();
