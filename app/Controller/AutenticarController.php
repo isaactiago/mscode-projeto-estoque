@@ -8,16 +8,38 @@ class AutenticarController extends AbstractController
 {
     public function index(array $requestData): void
     {
- 
+        
+        session_start();
         if(empty($_POST['email']) || empty($_POST['password'])){
             $this->redirect('/login');
             exit; 
         } 
            
         $usuarioConexao = new Usuario();
+        $usuario = $usuarioConexao->buscarPorEmail(email: $requestData['email']);
+        
+        if(!empty($usuario)){
+            $senha = $requestData['password'];
+            if(  password_verify($senha,"{$usuario[0]['senha']}")){
+                echo $_SESSION['usuarioLogado'] = true;
+                $_SESSION['id'] = $usuario[0][ 'id' ];
+                $this->redirect('/index');
+                exit;
+            }
+          
+            $this->redirect('/loginErrado');
+            exit; 
+           
+        }else{
+            //se o meu valida login nao for true; ele manda para essa pagina
+            $this->redirect('/loginErrado');
+            exit; 
+        }
     
-         if($usuarioConexao->validaLogin(email: $requestData['email'],senha : $requestData['password'])){
+      /*   if($usuarioConexao->validaLogin(email: $requestData['email'],senha : $requestData['password'])){
 
+            echo $_SESSION['usuarioLogado'] = true;
+            $_SESSION['email'] = $requestData[ 'email' ];
             $this->redirect('/index');
             exit;
 
@@ -25,7 +47,8 @@ class AutenticarController extends AbstractController
             //se o meu valida login nao for true; ele manda para essa pagina
             $this->redirect('/loginErrado');
             exit; 
-        }
+        } */
+      
        
     }
 }

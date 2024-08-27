@@ -29,6 +29,13 @@ class Usuario
         return false;
     }
 
+    public function buscarPorEmail(string $email): array
+    {
+       
+        $usuario = $this->query->select('usuario', "email = '{$email}'");
+
+        return $usuario;
+    }
 
     public function cadastarUsuario(array $dados): bool
     {

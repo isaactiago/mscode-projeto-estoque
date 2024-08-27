@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="/public/assets/css/styles.css" rel="stylesheet">
+    <link href="/assets/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
             <div class="container">
                 <header class="d-flex flex-wrap justify-content-center align-items-center py-3">
                     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                        <img class="me-2" src="/public/assets/images/logotipo.svg" width="53">
+                        <img class="me-2" src="/assets/images/logotipo.svg" width="53">
                         <span class="fs-4">MS Code - Estoque</span>
                     </a>
 
