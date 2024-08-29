@@ -28,7 +28,7 @@ class Query
                 $sql .= " WHERE {$condicao}";
             }
             
-        
+            
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
 
@@ -95,7 +95,7 @@ class Query
     {
         try {
             $sql = "DELETE FROM {$tabela} WHERE {$condicao}";
-
+       
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
 
