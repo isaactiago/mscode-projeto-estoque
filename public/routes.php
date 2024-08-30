@@ -14,6 +14,7 @@ use App\Controller\Categoria\NovaCategoriaController;
 use App\Controller\Categoria\CadastrarCategoriaController;
 use App\Controller\Categoria\RemoverController;
 use App\Controller\Categoria\AlterarController;
+use App\Controller\Categoria\SalvarController;
 
 
 error_reporting(E_ALL);
@@ -33,6 +34,8 @@ $router = [
         '/cadastrarCategoria' => CadastrarCategoriaController::class,
         '/remover' => RemoverController::class,
         '/editar' => AlterarController::class,
+        '/salvar' => SalvarController::class,
+
     ],
     'default' => NotFoundController::class,
     

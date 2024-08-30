@@ -28,7 +28,7 @@ class Query
                 $sql .= " WHERE {$condicao}";
             }
             
-            
+           
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
 

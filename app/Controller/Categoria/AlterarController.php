@@ -14,11 +14,11 @@ class AlterarController extends AbstractController
 
 
         $id = $requestData['id'];
-
+        $nome = $requestData['nome'];
         $model = new EditarCategoria();
-        $categoria = $model->editarCategoria($id);
-
-        $this->render('categorias/cadastrar_editar.php', ['categoria' => $categoria]);
+        $categoria = $model->buscar(id : $id, nome : $nome);
+       
+        $this->render('cadastrar_editar.php', ['categoria' => $categoria]);
       
     }
 }

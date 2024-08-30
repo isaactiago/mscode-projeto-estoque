@@ -18,15 +18,10 @@ class CadastrarCategoriaController extends AbstractController
         ];
         $cadastro = $cadastrarConexao->cadastrarCategorias(dado: $listaCategoria);
        
-        if(empty($requestData['nome'])){
-         
-           $this->redirect('/nova_categoria');
-            exit;  
-            
-        }
+       
         if(!empty($cadastro)){
 
-            $this->redirect('/nova_categoria');
+            $this->redirect('/categorias');
             exit; 
            
         }else{

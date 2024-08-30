@@ -13,18 +13,19 @@ class EditarCategoria
     public function __construct()
     {
         $this->query = new Query();
-
-      
     }
 
    
-   public function editarCategoria(string $id,string $nome): bool
+   public function editarCategoria(int $id,string $nome): bool
    {
-     
-        $categoria = $this->query->update("categoria",['nome' => $nome],"id = {$id}");
-      
-        return $categoria; 
-    }
+
+      return $this->query->update("categoria",['nome' => $nome],"id = {$id}");
+   }
+
+   public function buscar(int $id, string $nome): array
+   {
+       return $this->query->select('categoria', "id = {$id} AND nome = '{$nome}'")[0];
+   }
 
     
 }

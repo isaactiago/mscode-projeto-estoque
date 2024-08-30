@@ -37,7 +37,7 @@ require_once('includes/head.php')
                            <th scope='row'>{$valor['id']}</th>
                               <td>{$valor['nome']}</td>
                               <td class='col-1 text-align-right'>
-                                <a href='/alterar?id={$valor['id']}' class='btn btn-secondary btn-sm'><i class='bi bi-pencil'></i></a>
+                                <a href='/editar?id={$valor['id']}&nome={$valor['nome']}' class='btn btn-secondary btn-sm'><i class='bi bi-pencil'></i></a>
                                 <a href='/remover?id={$valor['id']}' class='btn btn-danger btn-sm'><i class='bi bi-x'></i></a>
                            </td>
                        </tr>
