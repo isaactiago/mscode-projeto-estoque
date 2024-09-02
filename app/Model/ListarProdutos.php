@@ -1,11 +1,10 @@
 <?php 
-
 namespace App\Model;
 
 use App\Database\Database;
 use App\Database\Query;
 
-class RemoverCategoria
+class ListarProdutos
 {
     private Query $query;
 
@@ -17,18 +16,14 @@ class RemoverCategoria
     }
 
    
-   public function removerCategoria(string $id): bool
+   public function listarProdutos(): false|array
    {
-     
-        $categoria = $this->query->delete("categoria"," id = {$id}");
+        $listagem = $this->query->select("produto");
       
-        return $categoria; 
-    }
+        return $listagem;
+   }
 
     
 }
-
-
-
 
 ?>

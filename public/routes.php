@@ -15,6 +15,10 @@ use App\Controller\Categoria\CadastrarCategoriaController;
 use App\Controller\Categoria\RemoverController;
 use App\Controller\Categoria\AlterarController;
 use App\Controller\Categoria\SalvarController;
+use App\Controller\Produto\ProdutosController;
+use  App\Controller\Produto\RemoverProdutoController;
+use  App\Controller\Produto\BuscarController;
+use  App\Controller\Produto\EditarProdutoController;
 
 
 error_reporting(E_ALL);
@@ -35,6 +39,10 @@ $router = [
         '/remover' => RemoverController::class,
         '/editar' => AlterarController::class,
         '/salvar' => SalvarController::class,
+        '/produtos' => ProdutosController::class,
+        '/removerProduto' => RemoverProdutoController::class,
+        '/editarProduto' => BuscarController::class,
+        '/produtoEditado' => EditarProdutoController::class,
 
     ],
     'default' => NotFoundController::class,

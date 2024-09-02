@@ -5,7 +5,7 @@ namespace App\Model;
 use App\Database\Database;
 use App\Database\Query;
 
-class RemoverCategoria
+class RemoverProduto
 {
     private Query $query;
 
@@ -17,18 +17,14 @@ class RemoverCategoria
     }
 
    
-   public function removerCategoria(string $id): bool
+   public function removerProduto(string $id): bool
    {
      
-        $categoria = $this->query->delete("categoria"," id = {$id}");
-      
-        return $categoria; 
+        $model = $this->query->delete("produto"," id = {$id}");
+        
+        return $model; 
     }
 
     
 }
-
-
-
-
 ?>

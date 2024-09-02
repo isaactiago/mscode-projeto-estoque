@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 
 <?php  
-require_once('includes/head.php')
+require_once('includes/head.php');
 ?>
 
 <body>

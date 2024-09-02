@@ -7,7 +7,14 @@ class AreaInicialController extends AbstractController
     public function index(array $data): void
     {
       
-        $this->render('index.php');
+        session_start();
+       
+        if(isset($_SESSION['usuarioLogado'])){
+            $this->render('index.php');
+        }else{
+            $this->redirect('/error');
+        }
+       
       
         
     }

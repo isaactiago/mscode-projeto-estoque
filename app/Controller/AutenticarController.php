@@ -23,7 +23,7 @@ class AutenticarController extends AbstractController
             $senha = $requestData['password'];
 
             if(password_verify($senha,"{$usuario[0]['senha']}")){
-                echo $_SESSION['usuarioLogado'] = true;
+                $_SESSION['usuarioLogado'] = true;
                 $_SESSION['id'] = $usuario[0][ 'id' ];
                 $this->redirect('/index');
                 exit;

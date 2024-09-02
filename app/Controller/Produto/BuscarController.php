@@ -1,22 +1,22 @@
 <?php 
 
-
-namespace App\Controller\Categoria;
+namespace App\Controller\Produto;
 use App\Controller\AbstractController;
-use App\Model\EditarCategoria;
+use App\Model\EditarProduto;
 
-class AlterarController extends AbstractController
+class BuscarController extends AbstractController
 {
     public function index(array $requestData): void
     {
            
         $id = $requestData['id'];
         $nome = $requestData['nome'];
-        $model = new EditarCategoria();
+        $model = new EditarProduto();
+
         $categoria = $model->buscar(id : $id, nome : $nome);
         
        
-        $this->render('cadastrar_editar.php', ['categoria' => $categoria]);
+        $this->render('produto_editar.php', ['categoria' => $categoria]);
       
     }
 }

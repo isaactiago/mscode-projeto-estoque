@@ -28,7 +28,7 @@ class Query
                 $sql .= " WHERE {$condicao}";
             }
             
-           
+         
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
 
@@ -74,7 +74,7 @@ class Query
             }
 
             $sql = "UPDATE {$tabela} SET " . implode(', ', $sets) . " WHERE {$condicao}";
-
+            
             $stmt = $this->pdo->prepare($sql);
 
             foreach ($dados as $coluna => $valor) {
