@@ -16,6 +16,9 @@ require_once('includes/head.php')
     <div class="container py-5">
       <div class="mb-4">
         <h1>Produtos</h1>
+        <div>
+          <a href="/novo_produto" class="btn btn-primary"><i class="bi bi-plus"></i>Novo produto</a>
+        </div>
       </div>
 
       <table class="table table-striped table-hover">
@@ -49,9 +52,10 @@ require_once('includes/head.php')
                     <td>{$valor['quantidade_disponivel']}</td>
                       <td>{$valor['valor']}</td>
                     <td class='col-2 text-align-right'>
-                      <button class='btn btn-primary btn-sm'><i class='bi bi-plus'></i></button>
+                      <a href='/aumentar?id={$valor['id']}&qt_disponivel={$valor['quantidade_disponivel']}' class='btn btn-primary btn-sm'><i class='bi bi-plus'></i></a>
                       <a href='/editarProduto?id={$valor['id']}&nome={$valor['nome']}' class='btn btn-secondary btn-sm'><i class='bi bi-pencil'></i></a>
                       <a href='/removerProduto?id={$valor['id']}' class='btn btn-danger btn-sm'><i class='bi bi-x'></i></a>
+                      <a href='/produtos/vender' class='btn btn-primary btn-sm'>Vender</a>
                     </td>
                   </tr>
 

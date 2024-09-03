@@ -47,7 +47,7 @@ class Query
             $valores = ':' . implode(', :', array_keys($dados));
 
             $sql = "INSERT INTO {$tabela} ({$colunas}) VALUES ({$valores})";
-
+            
             $stmt = $this->pdo->prepare($sql);
         
             foreach ($dados as $coluna => $valor) {

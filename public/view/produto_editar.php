@@ -61,7 +61,7 @@
                 echo "
                     <div class='mb-3'>
                     <label for='nome' class='form-label'>quantidade_inicial</label>
-                    <input type='text' class='form-control' id='qt_inicial' name='qt_inicial' value='{$data['categoria']['quantidade_inicial']}'
+                    <input type='text' class='form-control' id='qt_inicial' name='qt_inicial' value='{$data['categoria']['quantidade_inicial']}' readonly
                 ";
             }
         ?>
@@ -71,7 +71,7 @@
                     echo "
                         <div class='mb-3'>
                         <label for='nome' class='form-label'>quantidade_disponivel</label>
-                        <input type='text' class='form-control' id='qt_disponivel' name='qt_disponivel' value='{$data['categoria']['quantidade_disponivel']}'
+                        <input type='text' class='form-control' id='qt_disponivel' name='qt_disponivel' value='{$data['categoria']['quantidade_disponivel']}'readonly
                     ";
                 }
         ?>

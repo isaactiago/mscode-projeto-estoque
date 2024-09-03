@@ -19,6 +19,9 @@ use App\Controller\Produto\ProdutosController;
 use  App\Controller\Produto\RemoverProdutoController;
 use  App\Controller\Produto\BuscarController;
 use  App\Controller\Produto\EditarProdutoController;
+use  App\Controller\Produto\NovoProdutoController;
+use  App\Controller\Produto\InserirProdutoController;
+use  App\Controller\Produto\AumentarController;
 
 
 error_reporting(E_ALL);
@@ -43,6 +46,9 @@ $router = [
         '/removerProduto' => RemoverProdutoController::class,
         '/editarProduto' => BuscarController::class,
         '/produtoEditado' => EditarProdutoController::class,
+        '/novo_produto' => NovoProdutoController::class,
+        '/inserirProduto' => InserirProdutoController::class,
+        '/aumentar' => AumentarController::class,
 
     ],
     'default' => NotFoundController::class,

@@ -12,7 +12,7 @@ class AreaInicialController extends AbstractController
         if(isset($_SESSION['usuarioLogado'])){
             $this->render('index.php');
         }else{
-            $this->redirect('/error');
+            $this->redirect('/login');
         }
        
       
