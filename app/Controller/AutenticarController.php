@@ -17,7 +17,7 @@ class AutenticarController extends AbstractController
            
         $usuarioConexao = new Usuario();
         $usuario = $usuarioConexao->buscarPorEmail(email: $requestData['email']);
-        
+   
         if(!empty($usuario)){
 
             $senha = $requestData['password'];
@@ -25,6 +25,7 @@ class AutenticarController extends AbstractController
             if(password_verify($senha,"{$usuario[0]['senha']}")){
                 $_SESSION['usuarioLogado'] = true;
                 $_SESSION['id'] = $usuario[0][ 'id' ];
+                $_SESSION['nome'] = $usuario[0]['nome'];
                 $this->redirect('/index');
                 exit;
             }

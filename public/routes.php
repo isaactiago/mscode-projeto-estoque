@@ -22,6 +22,8 @@ use  App\Controller\Produto\EditarProdutoController;
 use  App\Controller\Produto\NovoProdutoController;
 use  App\Controller\Produto\InserirProdutoController;
 use  App\Controller\Produto\AumentarController;
+use  App\Controller\Produto\DiminuirController;
+use App\Controller\LogoutController;
 
 
 error_reporting(E_ALL);
@@ -49,6 +51,8 @@ $router = [
         '/novo_produto' => NovoProdutoController::class,
         '/inserirProduto' => InserirProdutoController::class,
         '/aumentar' => AumentarController::class,
+        '/diminuir' => DiminuirController::class,
+        '/sair' => LogoutController::class,
 
     ],
     'default' => NotFoundController::class,
