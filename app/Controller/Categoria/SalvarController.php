@@ -12,9 +12,6 @@ class SalvarController extends AbstractController
     {
         $model = new EditarCategoria();
         $model2 = new InserirCategoria();
-
-      
-        
         
         if (isset($requestData['nome'])) {
             $model->editarCategoria($requestData['id'],$requestData['nome']);

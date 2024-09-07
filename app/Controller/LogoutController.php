@@ -11,6 +11,5 @@ class LogoutController extends AbstractController
         session_destroy();
         
         $this->redirect('/login');
-        
     }
 }

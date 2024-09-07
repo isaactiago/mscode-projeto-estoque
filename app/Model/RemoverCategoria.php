@@ -15,17 +15,12 @@ class RemoverCategoria
 
       
     }
-
    
    public function removerCategoria(string $id): bool
    {
-     
         $categoria = $this->query->delete("categoria"," id = {$id}");
-      
         return $categoria; 
-    }
-
-    
+   }
 }
 
 

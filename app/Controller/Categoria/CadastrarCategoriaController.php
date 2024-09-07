@@ -8,16 +8,13 @@ class CadastrarCategoriaController extends AbstractController
 {
     public function index(array $requestData): void
     {
-        
-       
-           
         $cadastrarConexao = new InserirCategoria();
       
         $listaCategoria = [
             'nome' => $requestData['nome']
         ];
+
         $cadastro = $cadastrarConexao->cadastrarCategorias(dado: $listaCategoria);
-       
        
         if(!empty($cadastro)){
 
@@ -28,7 +25,6 @@ class CadastrarCategoriaController extends AbstractController
             $this->redirect('/nova_categoria');
             exit; 
         }
-       
     }
 }
 

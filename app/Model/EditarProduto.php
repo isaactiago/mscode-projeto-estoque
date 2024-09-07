@@ -20,7 +20,8 @@ class EditarProduto
    {
 
       return $this->query->update(
-        "produto",['nome' => $nome,'descricao' => $desc,'quantidade_inicial' => $qt_inicial, 'quantidade_disponivel' => $qt_disponivel,'valor' => $valor],
+        "produto",
+        ['nome' => $nome,'descricao' => $desc,'quantidade_inicial' => $qt_inicial, 'quantidade_disponivel' => $qt_disponivel,'valor' => $valor],
         "id = {$id}"
     );
    }

@@ -17,7 +17,6 @@ class RemoverController extends AbstractController
          
            $this->redirect('/categorias');
             exit;  
-            
         }
       
     }

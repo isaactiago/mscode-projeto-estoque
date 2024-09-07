@@ -16,23 +16,15 @@ class InserirCategoria
       
     }
 
-   
    public function cadastrarCategorias(array $dado): bool
    {
-     
-       if(empty($dado)){
-            $categoria = $this->query->insert("categoria",$dado);
-          return false;
-       }else{
-        $categoria = $this->query->insert("categoria",$dado);
-        return true;
-       }
-      
-      
-       
-   }
+       if(!empty($dado)){
+            $this->query->insert("categoria",$dado);
+            return true;
+        }
 
-    
+      return false;
+   }
 }
 
 

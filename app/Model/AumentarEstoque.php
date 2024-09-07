@@ -14,9 +14,6 @@ class AumentarEstoque
         $this->query = new Query();
     }
 
-   
-
-
    public function aumentarEstoque(int $id): bool
    {
        $resultado = $this->query->select('produto',"id = {$id}" ,"quantidade_disponivel");
@@ -24,14 +21,12 @@ class AumentarEstoque
         if($resultado && isset($resultado[0]['quantidade_disponivel'])){
             $novaQuantidade = $resultado[0]['quantidade_disponivel'] + 1;
 
-             // Atualizar a quantidade no banco de dados
-             return $this->query->update('produto', ['quantidade_disponivel' => $novaQuantidade], "id = {$id}");
+            // Atualizar a quantidade no banco de dados
+            return $this->query->update('produto', ['quantidade_disponivel' => $novaQuantidade], "id = {$id}");
         }
 
         return false;
     }
-
-    
 }
 
 ?>

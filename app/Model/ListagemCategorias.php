@@ -16,17 +16,10 @@ class ListagemCategorias
       
     }
 
-   
    public function listarCategorias(): false|array
    {
         $listagem = $this->query->select("categoria");
-      
         return $listagem;
    }
-
-    
 }
-
-
-
 ?>
